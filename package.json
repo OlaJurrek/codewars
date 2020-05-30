@@ -1,0 +1,22 @@
+{
+  "name": "code-wars",
+  "version": "1.0.0",
+  "description": "Code Wars Katas",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --fix index.js",
+    "sync": "browser-sync start -s -f 'index.html, index.js'",
+    "watch:lint": "onchange -i -v 'index.js' -- npm run lint",
+    "start": "npm-run-all sync watch:lint"
+  },
+  "author": "Aleksandra Mętrak",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.0.2"
+  }
+}
